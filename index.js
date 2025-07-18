@@ -16,6 +16,9 @@ app.use("/uploads", express.static("uploads"));
 
 app.use("/api/contact", contactRoutes);
 app.use("/api/admin", adminRoutes);
+app.use("/",(req,res)=>{
+  res.send('hello ')
+})
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () =>
